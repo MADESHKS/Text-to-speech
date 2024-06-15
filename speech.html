@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT TO SPEECH</title>
+    <link rel="stylesheet" href="speech.css">
+</head>
+<body>
+    <div id = "container">
+        <h1>Text to Speech</h1>
+        <textarea id="texttosspeech"></textarea>
+        <button onclick="maddy()">Text to speak</button>
+    </div>
+
+    <script>
+        var speech = new SpeechSynthesisUtterance();
+        function maddy(){
+            speech.text=texttosspeech.value;
+            speech.rate=1;
+            speech.volume=1;
+            speech.pitch=1;
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+    
+</body>
+</html>
